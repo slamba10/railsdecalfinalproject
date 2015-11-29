@@ -5,5 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
+# user = CreateAdminService.new.call
+# puts 'CREATED ADMIN USER: ' << user.email
+
+user = User.new
+user.name = 'Admin'
+user.email = 'admin@test.com'
+user.password = 'admin123'
+user.encrypted_password = '#$taawktljasktlw4aaglj'
+user.save!
+
+# Make example tasks that belong to Admin
+%w(finish\ project do\ homework).each do |text|
+  Task.create text: text, assign_by: 1, user_id: 1
+end

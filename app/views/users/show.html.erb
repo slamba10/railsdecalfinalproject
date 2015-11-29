@@ -5,9 +5,8 @@
 <h3>Tasks</h3>
 <ul>
 <% @user.tasks.each do |u| %>
-	<li><%= u.text %></li>
+	<li><%= User.find(u.assign_by).name %> told you to <%= u.text %></li>
 <% end %>
-
-<%= button_to "New Task", new_path, :class => "button medium", :method => :get %>
 </ul>
-
+<p>
+<%= button_to "New Task", new_path, :class => "button medium", :method => :get %>

@@ -5,7 +5,7 @@ class TasksController < ApplicationController
 
 	def create
 		@task = Task.create task_params
-		@task.assign_by = current_user
+		@task.assign_by = current_user.id
 		@task.save
 		redirect_to :back
 	end
@@ -13,5 +13,5 @@ class TasksController < ApplicationController
 	def task_params
 		params.require(:task).permit(:text, :user_id)
 	end
-	
+
 end
