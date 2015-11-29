@@ -5,7 +5,7 @@
 <h3>Tasks</h3>
 <ul>
 <% @user.tasks.each do |u| %>
-	<li><%= u.text %>
+	<li><%= u.text %></li>
 <% end %>
 
 <%= button_to "New Task", new_path, :class => "button medium", :method => :get %>

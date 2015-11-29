@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
 
   
-  get '/tasks/new', as:'new', to:'task#new'
-  post '/tasks/new', as:'create', to:'task#create'
+  get 'tasks/new', as:'new', to:'tasks#new'
+  post 'tasks/new', as:'create', to:'tasks#create'
   
 end
