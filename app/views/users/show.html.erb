@@ -1,3 +1,13 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+
+<h3>Tasks</h3>
+<ul>
+<% @user.tasks.each do |u| %>
+	<li><%= u.text %>
+<% end %>
+
+<%= button_to "New Task", new_path, :class => "button medium", :method => :get %>
+</ul>
+
