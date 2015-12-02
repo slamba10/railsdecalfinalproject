@@ -19,3 +19,7 @@ user.save!
 %w(finish\ project do\ homework).each do |text|
   Task.create text: text, assign_by: 1, user_id: 1
 end
+
+team = Team.new
+team.name = 'Final Project Group'
+team.save!

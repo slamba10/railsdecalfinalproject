@@ -1,0 +1,6 @@
+<h3><%= team.name%></h3>
+  <p><% team.users.each do |user| %>
+	<p><%= user.name %></p>
+</p>
+<% end %>
+<%= button_to "Add to Team", add_team_path(:id => team.id), :class => "button medium", :method => :patch%>

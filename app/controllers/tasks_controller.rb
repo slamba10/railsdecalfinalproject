@@ -7,7 +7,7 @@ class TasksController < ApplicationController
 		@task = Task.create task_params
 		@task.assign_by = current_user.id
 		@task.save
-		redirect_to :back
+		redirect_to user_path(current_user.id)
 	end
 
 	def task_params

@@ -1,0 +1,5 @@
+<h3>New Team</h3>
+<%= simple_form_for @team, url:new_team_path do |f| %>
+  <%= f.input :name, label:'Team Name' %>
+  <%= f.button :submit %>
+<% end %>

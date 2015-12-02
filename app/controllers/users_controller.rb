@@ -12,4 +12,12 @@ class UsersController < ApplicationController
     # end
   end
 
+  def add
+    @user = current_user
+    @user.team_id = params[:id]
+    @user.save
+    redirect_to :back
+  end
+
+
 end
