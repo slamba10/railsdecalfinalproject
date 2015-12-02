@@ -9,6 +9,8 @@ User
 has name, email, and belongs to a Team and has many comments.
 Task
 has text and belongs to a team
+Team
+has name and has many users
 
 Features:
 Users can log in
@@ -19,4 +21,4 @@ Division of Labor:
 Franky: Created users and figured out user authentication
 Connie: Created task models
 Sahil: Figured out how the relationship between task and user
-James: Helped with relationship and created seed file
+James: Helped with relationship and pushed to Heroku
